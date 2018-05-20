@@ -4,29 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="e.kefch_000.e_school.activity_books">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <Button
-        android:id="@+id/kniga1"
+        android:id="@+id/highlight1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
+        android:layout_marginStart="768dp"
         android:layout_marginTop="4dp"
-        android:onClick="onClickBook1"
-        android:text="Students Book"
+        android:onClick="onHighlighted"
+        android:text="udebeli selektiranoto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/kniga2"
+        android:id="@+id/save1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:onClick="onClickBook2"
-        android:text="Classroom Notebook"
+        android:onClick="onSaved"
+        android:text="zapomni selektiranoto"
         app:layout_constraintStart_toStartOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
@@ -37,11 +35,25 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Exit"
-        android:onClick="onClickBook3"
+        android:text="Kniga 3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="408dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
 

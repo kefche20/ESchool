@@ -19,11 +19,20 @@
         <activity
             android:name=".activity_books"
             android:label="@string/title_activity_books"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Notebook"
+            android:label="@string/title_activity_notebook"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Book"
+            android:label="@string/title_activity_book"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

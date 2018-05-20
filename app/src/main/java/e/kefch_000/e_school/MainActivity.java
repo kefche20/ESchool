@@ -15,44 +15,48 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
-    @BindView(R.id.button1) Button button1;
-    @BindView(R.id.button2) Button button2;
-    @BindView(R.id.button3) Button button3;
+    @BindView(R.id.button1)
+    Button button1;
+    @BindView(R.id.button2)
+    Button button2;
+    @BindView(R.id.button3)
+    Button button3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         LogStuff("Screen orientation set to landscape.");
-
     }
+
     @OnClick(R.id.button1)
     public void onClick(View view) {
         Toast.makeText(view.getContext(), "Changing activity", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(this, activity_books.class);
         LogStuff("some button clicked");
-        i.putExtra("KEY","Button 1");
+        i.putExtra("SUBJECT", "bulgarian");
         startActivity(i);
-
     }
+
     @OnClick(R.id.button2)
     public void onClickSec(View view) {
         Toast.makeText(view.getContext(), "Changing activity", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(this, activity_books.class);
-        i.putExtra("KEY","Button 2");
+        i.putExtra("SUBJECT", "english");
         startActivity(i);
     }
+
     @OnClick(R.id.button3)
     public void onClickThird(View view) {
         Toast.makeText(view.getContext(), "Changing activity", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(this, activity_books.class);
-        i.putExtra("KEY","Button 3");
+        i.putExtra("SUBJECT", "maths");
         startActivity(i);
     }
-    public void LogStuff(String t)
-    {
-        Log.d(TAG, t);
+
+    public void LogStuff(String t) {
+        Log.wtf(TAG, t);
     }
 }
